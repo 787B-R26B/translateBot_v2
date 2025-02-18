@@ -78,6 +78,8 @@ client.on("messageCreate", async (message) => {
         }
         await client.destroy()
         
+    }else if (command === "help"){
+        console.log("- !start: 翻訳を開始します\n- !end: 翻訳を終了します\n- !shutdown: (BOT管理者のみ)BOTをシャットダウンします")
     }
 }catch(e: unknown){
     if (e instanceof Error){
