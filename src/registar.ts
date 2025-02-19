@@ -27,8 +27,8 @@ const commands = [ping, hello, help]
 const rest = new REST().setToken(process.env.DISCORD_BOT_TOKEN!)
     async function main(){
         await rest.put(
-            Routes.applicationCommands("")
-            { body: commands}
+            Routes.applicationCommands(""),
+            {body: commands}
         )
     }
 main().catch((err) => console.log(err))
